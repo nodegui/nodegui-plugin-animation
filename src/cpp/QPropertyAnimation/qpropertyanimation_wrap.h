@@ -21,7 +21,6 @@ class QPropertyAnimationWrap : public Napi::ObjectWrap<QPropertyAnimationWrap> {
   Napi::Value setPropertyName(const Napi::CallbackInfo &info);
   Napi::Value propertyName(const Napi::CallbackInfo &info);
   Napi::Value setTargetObject(const Napi::CallbackInfo &info);
-  Napi::Value targetObject(const Napi::CallbackInfo &info);
 
   QABSTRACTANIMATION_WRAPPED_METHODS_DECLARATION
 };

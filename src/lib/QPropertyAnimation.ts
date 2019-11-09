@@ -1,4 +1,4 @@
-import { NativeElement, BaseWidgetEvents, NObject } from '@nodegui/nodegui';
+import { NativeElement, BaseWidgetEvents, NodeObject } from '@nodegui/nodegui';
 import addon from './utils/addon';
 import { QAbstractAnimation } from './QAbstractAnimation';
 
@@ -8,7 +8,7 @@ export const QPropertyAnimationEvents = Object.freeze({
 
 export class QPropertyAnimation extends QAbstractAnimation {
     native: NativeElement;
-    constructor(parent?: NObject) {
+    constructor(parent?: NodeObject) {
         let native;
         if (parent) {
             native = new addon.QPropertyAnimation(parent.native);
@@ -18,5 +18,14 @@ export class QPropertyAnimation extends QAbstractAnimation {
         super(native);
         this.native = native;
         this.nodeParent = parent;
+    }
+    setPropertyName(name: string): void {
+        this.native.setPropertyName(name);
+    }
+    propertyName(): string {
+        return this.native.propertyName();
+    }
+    setTargetObject(object: NodeObject): void {
+        return this.native.setTargetObject(object.native);
     }
 }
