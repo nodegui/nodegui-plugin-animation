@@ -1,10 +1,7 @@
-# NodeGui example plugin
+# NodeGui plugin animation
 
-This is an example repo which showcases how to build plugins for NodeGui.
+Plugin you can use to create native animations in NodeGui
 
-Start with `demo.ts` to understand how it all works.
+## Requirements
 
-More details soon.
-
-
-Please name your plugin as `nodegui-plugin-<yourpluginname>`
+Requires NodeGui v0.4.0 and up

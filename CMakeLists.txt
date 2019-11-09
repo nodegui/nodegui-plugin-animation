@@ -9,7 +9,7 @@ string(REPLACE "\"" "" NODEGUI_PLUGIN_CMAKE_HELPER ${NODEGUI_PLUGIN_CMAKE_HELPER
 include("${NODEGUI_PLUGIN_CMAKE_HELPER}")
 
 # -------------- User Config ---------------
-set(PLUGIN_ADDON_NAME "nodegui_plugin_statusbar")
+set(PLUGIN_ADDON_NAME "nodegui_plugin_animation")
 
 project(${PLUGIN_ADDON_NAME})
 

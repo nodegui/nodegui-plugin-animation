@@ -1,1 +1,1 @@
-export { QStatusBar, QStatusBarEvents } from "./lib/QStatusBar";
+export { QStatusBar, QStatusBarEvents } from './lib/QStatusBar';
