@@ -4,7 +4,7 @@
 
 #include <QPointer>
 
-#include "QAbstractAnimation/qabstractanimation_macro.h"
+#include "QVariantAnimation/qvariantanimation_macro.h"
 #include "npropertyanimation.hpp"
 
 class QPropertyAnimationWrap : public Napi::ObjectWrap<QPropertyAnimationWrap> {
@@ -22,5 +22,5 @@ class QPropertyAnimationWrap : public Napi::ObjectWrap<QPropertyAnimationWrap> {
   Napi::Value propertyName(const Napi::CallbackInfo &info);
   Napi::Value setTargetObject(const Napi::CallbackInfo &info);
 
-  QABSTRACTANIMATION_WRAPPED_METHODS_DECLARATION
+  QVARIANTANIMATION_WRAPPED_METHODS_DECLARATION
 };

@@ -17,7 +17,7 @@ Napi::Object QPropertyAnimationWrap::init(Napi::Env env, Napi::Object exports) {
        InstanceMethod("setTargetObject",
                       &QPropertyAnimationWrap::setTargetObject),
        InstanceMethod("propertyName", &QPropertyAnimationWrap::propertyName),
-       QABSTRACTANIMATION_WRAPPED_METHODS_EXPORT_DEFINE(
+       QVARIANTANIMATION_WRAPPED_METHODS_EXPORT_DEFINE(
            QPropertyAnimationWrap)});
   constructor = Napi::Persistent(func);
   exports.Set(CLASSNAME, func);

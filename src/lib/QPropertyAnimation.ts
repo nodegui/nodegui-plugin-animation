@@ -1,12 +1,11 @@
-import { NativeElement, BaseWidgetEvents, NodeObject } from '@nodegui/nodegui';
+import { NativeElement, NodeObject } from '@nodegui/nodegui';
 import addon from './utils/addon';
-import { QAbstractAnimation } from './QAbstractAnimation';
+import { NodeVariantAnimation, QVariantAnimationEvents } from './QVariantAnimation';
 
 export const QPropertyAnimationEvents = Object.freeze({
-    ...BaseWidgetEvents,
+    ...QVariantAnimationEvents,
 });
-
-export class QPropertyAnimation extends QAbstractAnimation {
+export class QPropertyAnimation extends NodeVariantAnimation {
     native: NativeElement;
     constructor(parent?: NodeObject) {
         let native;

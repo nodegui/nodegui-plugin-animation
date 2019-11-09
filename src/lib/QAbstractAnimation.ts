@@ -1,7 +1,7 @@
 import { NodeObject } from '@nodegui/nodegui';
 export abstract class QAbstractAnimation extends NodeObject {
-    start(policy: DeletionPolicy): void {
-        this.native.start(policy);
+    start(policy?: DeletionPolicy): void {
+        policy ? this.native.start(policy) : this.native.start();
     }
     stop(): void {
         this.native.stop();

@@ -18,6 +18,8 @@ add_library(${PLUGIN_ADDON_NAME} SHARED
     "${PROJECT_SOURCE_DIR}/src/cpp/main.cpp"
     "${PROJECT_SOURCE_DIR}/src/cpp/QPropertyAnimation/qpropertyanimation_wrap.cpp"
     "${PROJECT_SOURCE_DIR}/src/cpp/QPropertyAnimation/npropertyanimation.hpp"
+    "${PROJECT_SOURCE_DIR}/src/cpp/QVariantAnimation/qvariantanimation_wrap.cpp"
+    "${PROJECT_SOURCE_DIR}/src/cpp/QVariantAnimation/nvariantanimation.hpp"
 ) 
 
 AddPluginConfig(${PLUGIN_ADDON_NAME})
