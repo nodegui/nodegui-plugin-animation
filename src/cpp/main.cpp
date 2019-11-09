@@ -1,9 +1,9 @@
 #include <napi.h>
 
-#include "src/cpp/QStatusBar/qstatusbar_wrap.h"
+#include "QPropertyAnimation/qpropertyanimation_wrap.h"
 
 Napi::Object Main(Napi::Env env, Napi::Object exports) {
-  QStatusBarWrap::init(env, exports);
+  QPropertyAnimationWrap::init(env, exports);
   return exports;
 }
 

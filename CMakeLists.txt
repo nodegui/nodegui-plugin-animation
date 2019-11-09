@@ -16,8 +16,8 @@ project(${PLUGIN_ADDON_NAME})
 add_library(${PLUGIN_ADDON_NAME} SHARED  
     "${CMAKE_JS_SRC}"
     "${PROJECT_SOURCE_DIR}/src/cpp/main.cpp"
-    "${PROJECT_SOURCE_DIR}/src/cpp/QStatusBar/qstatusbar_wrap.cpp"
-    "${PROJECT_SOURCE_DIR}/src/cpp/QStatusBar/nstatusbar.hpp"
+    "${PROJECT_SOURCE_DIR}/src/cpp/QPropertyAnimation/qpropertyanimation_wrap.cpp"
+    "${PROJECT_SOURCE_DIR}/src/cpp/QPropertyAnimation/npropertyanimation.hpp"
 ) 
 
 AddPluginConfig(${PLUGIN_ADDON_NAME})
@@ -25,6 +25,7 @@ AddPluginConfig(${PLUGIN_ADDON_NAME})
 target_include_directories(${PLUGIN_ADDON_NAME} PRIVATE 
     "${CMAKE_JS_INC}" 
     "${PROJECT_SOURCE_DIR}"
+    "${PROJECT_SOURCE_DIR}/src/cpp"
 )
 target_link_libraries(${PLUGIN_ADDON_NAME} PRIVATE
     "${CMAKE_JS_LIB}"

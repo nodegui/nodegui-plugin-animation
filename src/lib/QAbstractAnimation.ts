@@ -1,6 +1,5 @@
-import { QObject } from '@nodegui/nodegui';
-
-export abstract class QAbstractAnimation extends QObject {
+import { NObject } from '@nodegui/nodegui';
+export abstract class QAbstractAnimation extends NObject {
     start(policy: DeletionPolicy): void {
         this.native.start(policy);
     }

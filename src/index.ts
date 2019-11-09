@@ -1,1 +1,1 @@
-export { QStatusBar, QStatusBarEvents } from './lib/QStatusBar';
+export { QPropertyAnimation, QPropertyAnimationEvents } from './lib/QPropertyAnimation';
