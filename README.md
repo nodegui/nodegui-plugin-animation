@@ -1,5 +1,3 @@
-
-
 # NodeGui plugin animation
 
 [![npm version](https://img.shields.io/npm/v/@nodegui/plugin-animation.svg)](https://www.npmjs.com/package/@nodegui/plugin-animation)
@@ -8,10 +6,10 @@ Plugin you can use to create native animations in NodeGui
 
 ## Requirements
 
-Requires NodeGui v0.4.0 and up
+Requires NodeGui v0.5.0 and up
 
+## Demo
 
-## Demo 
 ```js
 import { QPropertyAnimation } from '@nodegui/plugin-animation';
 import { QPushButton } from '@nodegui/nodegui';

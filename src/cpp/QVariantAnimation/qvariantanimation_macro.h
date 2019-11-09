@@ -11,36 +11,36 @@
  */
 
 #ifndef QVARIANTANIMATION_WRAPPED_METHODS_DECLARATION
-#define QVARIANTANIMATION_WRAPPED_METHODS_DECLARATION                   \
-  QABSTRACTANIMATION_WRAPPED_METHODS_DECLARATION                        \
-                                                                        \
-  Napi::Value setDuration(const Napi::CallbackInfo &info) {             \
-    Napi::Env env = info.Env();                                         \
-    Napi::HandleScope scope(env);                                       \
-    Napi::Number duration = info[0].As<Napi::Number>();                 \
-    this->instance->setDuration(duration.Int32Value());                 \
-    return env.Null();                                                  \
-  }                                                                     \
-                                                                        \
-  Napi::Value setStartValue(const Napi::CallbackInfo &info) {           \
-    Napi::Env env = info.Env();                                         \
-    Napi::HandleScope scope(env);                                       \
-    Napi::Value value = info[0];                                        \
-    auto variant =                                                      \
-        QSharedPointer<QVariant>(extrautils::convertToQVariant(value)); \
-    this->instance->setStartValue(*variant);                            \
-    return env.Null();                                                  \
-  }                                                                     \
-                                                                        \
-  Napi::Value setEndValue(const Napi::CallbackInfo &info) {             \
-    Napi::Env env = info.Env();                                         \
-    Napi::HandleScope scope(env);                                       \
-                                                                        \
-    Napi::Value value = info[0];                                        \
-    auto variant =                                                      \
-        QSharedPointer<QVariant>(extrautils::convertToQVariant(value)); \
-    this->instance->setEndValue(*variant);                              \
-    return env.Null();                                                  \
+#define QVARIANTANIMATION_WRAPPED_METHODS_DECLARATION                        \
+  QABSTRACTANIMATION_WRAPPED_METHODS_DECLARATION                             \
+                                                                             \
+  Napi::Value setDuration(const Napi::CallbackInfo &info) {                  \
+    Napi::Env env = info.Env();                                              \
+    Napi::HandleScope scope(env);                                            \
+    Napi::Number duration = info[0].As<Napi::Number>();                      \
+    this->instance->setDuration(duration.Int32Value());                      \
+    return env.Null();                                                       \
+  }                                                                          \
+                                                                             \
+  Napi::Value setStartValue(const Napi::CallbackInfo &info) {                \
+    Napi::Env env = info.Env();                                              \
+    Napi::HandleScope scope(env);                                            \
+    Napi::Value value = info[0];                                             \
+    auto variant =                                                           \
+        QSharedPointer<QVariant>(extrautils::convertToQVariant(env, value)); \
+    this->instance->setStartValue(*variant);                                 \
+    return env.Null();                                                       \
+  }                                                                          \
+                                                                             \
+  Napi::Value setEndValue(const Napi::CallbackInfo &info) {                  \
+    Napi::Env env = info.Env();                                              \
+    Napi::HandleScope scope(env);                                            \
+                                                                             \
+    Napi::Value value = info[0];                                             \
+    auto variant =                                                           \
+        QSharedPointer<QVariant>(extrautils::convertToQVariant(env, value)); \
+    this->instance->setEndValue(*variant);                                   \
+    return env.Null();                                                       \
   }
 
 #endif
