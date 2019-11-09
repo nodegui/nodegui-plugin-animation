@@ -7,17 +7,15 @@ const button = new QPushButton();
 button.setText('Animated Button');
 button.show();
 
-animation.setPropertyName('minimumHeight');
+animation.setPropertyName('windowOpacity');
 animation.setTargetObject(button);
 
 animation.setDuration(5000);
-animation.setStartValue(20);
-animation.setEndValue(50);
+animation.setStartValue(0.4);
+animation.setKeyValueAt(0.5, 1.0);
+animation.setEndValue(0.4);
 
 animation.start();
-setTimeout(() => {
-    animation.stop();
-}, 3000);
 
 (global as any).button = button;
 (global as any).animation = animation;

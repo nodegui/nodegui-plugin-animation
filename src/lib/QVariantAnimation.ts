@@ -16,6 +16,9 @@ export abstract class NodeVariantAnimation extends QAbstractAnimation {
     setEndValue(value: any): void {
         this.native.setEndValue(value);
     }
+    setKeyValueAt(step: number, value: any): void {
+        this.native.setKeyValueAt(step, value);
+    }
 }
 
 export class QVariantAnimation extends NodeVariantAnimation {

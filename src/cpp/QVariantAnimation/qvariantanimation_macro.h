@@ -35,11 +35,20 @@
   Napi::Value setEndValue(const Napi::CallbackInfo &info) {                  \
     Napi::Env env = info.Env();                                              \
     Napi::HandleScope scope(env);                                            \
-                                                                             \
     Napi::Value value = info[0];                                             \
     auto variant =                                                           \
         QSharedPointer<QVariant>(extrautils::convertToQVariant(env, value)); \
     this->instance->setEndValue(*variant);                                   \
+    return env.Null();                                                       \
+  }                                                                          \
+  Napi::Value setKeyValueAt(const Napi::CallbackInfo &info) {                \
+    Napi::Env env = info.Env();                                              \
+    Napi::HandleScope scope(env);                                            \
+    Napi::Number step = info[0].As<Napi::Number>();                          \
+    Napi::Value value = info[1];                                             \
+    auto variant =                                                           \
+        QSharedPointer<QVariant>(extrautils::convertToQVariant(env, value)); \
+    this->instance->setKeyValueAt(step.DoubleValue(), *variant);             \
     return env.Null();                                                       \
   }
 
@@ -51,6 +60,7 @@
   QABSTRACTANIMATION_WRAPPED_METHODS_EXPORT_DEFINE(ComponentWrapName)      \
   InstanceMethod("setDuration", &ComponentWrapName::setDuration),          \
       InstanceMethod("setStartValue", &ComponentWrapName::setStartValue),  \
-      InstanceMethod("setEndValue", &ComponentWrapName::setEndValue),
+      InstanceMethod("setEndValue", &ComponentWrapName::setEndValue),      \
+      InstanceMethod("setKeyValueAt", &ComponentWrapName::setKeyValueAt),
 
 #endif
