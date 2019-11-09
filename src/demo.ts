@@ -1,6 +1,5 @@
 import { QPropertyAnimation } from './index';
 import { QPushButton } from '@nodegui/nodegui';
-import { DeletionPolicy } from './lib/QAbstractAnimation';
 
 const animation = new QPropertyAnimation();
 
@@ -15,7 +14,10 @@ animation.setDuration(5000);
 animation.setStartValue(20);
 animation.setEndValue(50);
 
-animation.start(DeletionPolicy.DeleteWhenStopped);
+animation.start();
 setTimeout(() => {
     animation.stop();
 }, 3000);
+
+(global as any).button = button;
+(global as any).animation = animation;
