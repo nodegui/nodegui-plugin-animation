@@ -8,10 +8,16 @@ Plugin you can use to create native animations in NodeGui
 
 Requires NodeGui v0.5.0 and up
 
+## Installation
+
+```
+    npm install @nodegui/plugin-animation
+```
+
 ## Demo
 
 ```js
-import { QPropertyAnimation } from './index';
+import { QPropertyAnimation } from '@nodegui/plugin-animation';
 import { QPushButton } from '@nodegui/nodegui';
 
 const animation = new QPropertyAnimation();
