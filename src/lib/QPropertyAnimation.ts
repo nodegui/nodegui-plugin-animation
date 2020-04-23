@@ -7,7 +7,7 @@ export const QPropertyAnimationEvents = Object.freeze({
 });
 export class QPropertyAnimation extends NodeVariantAnimation {
     native: NativeElement;
-    constructor(parent?: NodeObject) {
+    constructor(parent?: NodeObject<any>) {
         let native;
         if (parent) {
             native = new addon.QPropertyAnimation(parent.native);
@@ -24,7 +24,7 @@ export class QPropertyAnimation extends NodeVariantAnimation {
     propertyName(): string {
         return this.native.propertyName();
     }
-    setTargetObject(object: NodeObject): void {
+    setTargetObject(object: NodeObject<any>): void {
         return this.native.setTargetObject(object.native);
     }
 }
