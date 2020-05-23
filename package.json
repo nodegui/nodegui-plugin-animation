@@ -8,7 +8,7 @@
         "build": "tsc && npm run build:addon",
         "postinstall": "npm run build:addon",
         "build:addon": "cross-env CMAKE_BUILD_PARALLEL_LEVEL=8 cmake-js compile",
-        "dev": "npm run build && qode --inspect dist/demo.js",
+        "dev": "npm run build && qode dist/demo.js",
         "test": "qode ./node_modules/.bin/jest",
         "lint:cpp": "clang-format -i --glob=src/cpp/**/*.[h,c]*",
         "lint:ts": "tsc --noEmit && eslint './src/**/*.{ts,tsx,js,jsx}' --fix"
@@ -16,31 +16,29 @@
     "author": "Atul R",
     "license": "MIT",
     "peerDependencies": {
-        "@nodegui/nodegui": ">=0.5.0"
+        "@nodegui/nodegui": ">=0.20.0"
     },
     "dependencies": {
-        "bluebird": "~3.7.2",
-        "cmake-js": "~6.1.0",
-        "cross-env": "^6.0.0",
-        "node-addon-api": "^2.0.0"
+        "bluebird": "^3.7.2",
+        "cmake-js": "^6.1.0",
+        "cross-env": "^7.0.2",
+        "node-addon-api": "^3.0.0"
     },
     "devDependencies": {
-        "@nodegui/nodegui": "~0.19.0",
-        "@nodegui/qode": "~2.0.4",
-        "@types/bindings": "^1.3.0",
-        "@types/jest": "~25.2.1",
-        "@types/node": "~13.13.2",
-        "@typescript-eslint/eslint-plugin": "~2.29.0",
-        "@typescript-eslint/parser": "~2.29.0",
+        "@nodegui/nodegui": "^0.21.0",
+        "@types/jest": "^25.2.3",
+        "@types/node": "^14.0.5",
+        "@typescript-eslint/eslint-plugin": "~3.0.0",
+        "@typescript-eslint/parser": "~3.0.0",
         "clang-format": "~1.4.0",
-        "eslint": "~6.8.0",
+        "eslint": "~7.1.0",
         "eslint-config-prettier": "~6.11.0",
         "eslint-plugin-prettier": "~3.1.3",
-        "husky": "^3.0.9",
-        "jest": "~25.4.0",
-        "prettier": "^1.18.2",
-        "ts-jest": "~25.4.0",
-        "typescript": "~3.8.3"
+        "husky": "^4.2.5",
+        "jest": "~26.0.1",
+        "prettier": "^2.0.5",
+        "ts-jest": "~26.0.0",
+        "typescript": "~3.9.3"
     },
     "husky": {
         "hooks": {
