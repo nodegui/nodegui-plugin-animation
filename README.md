@@ -6,7 +6,7 @@ Plugin you can use to create native animations in NodeGui
 
 ## Requirements
 
-Requires NodeGui v0.5.0 and up
+Requires NodeGui v0.19.0 and up
 
 ## Installation
 
