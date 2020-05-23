@@ -1,6 +1,6 @@
 {
     "name": "@nodegui/plugin-animation",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A animation native plugin example for NodeGui",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
